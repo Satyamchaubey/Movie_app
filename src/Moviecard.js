@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import YouTube from 'react-youtube';
 
  function MovieCard(props)  {
-    const { movies, addStars, minStars, cartBtn, favBtn } = props;
+    const { movies, addStars, minStars, cartBtn, favBtn, opts } = props;
     const { title, plot, poster, price, rating, stars, fav, cart,videoId } = movies || {};
     const playerRef = useRef(null);
 
@@ -14,16 +14,13 @@ import YouTube from 'react-youtube';
         <div className="main">
           <div className="movie-card">
             <div className="left">
+            <div className="video-container">
             <YouTube
-            videoId={poster}
-            opts={{
-              width: '380',
-              height: '260',
-              playerVars: {
-                autoplay: 0,
-              },
-            }}
-          />
+              videoId={poster}
+              opts={opts}
+              className="youtube-video" // Apply a class to the YouTube component
+            />
+          </div>
             </div>
             <div className="right">
               <div className="title">{title}</div>
