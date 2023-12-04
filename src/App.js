@@ -3,7 +3,7 @@ import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
 import { movies } from "./moviesData";
-import background from "./background";
+
 // import SearchBar from "./SearchBar";
 
 class App extends React.Component {
@@ -81,6 +81,7 @@ class App extends React.Component {
     const { movies, cartCount,searchTerm, filteredMovies } = this.state;
     return (
       <>
+      
         {/* <h1 className="m">Movie Lelo</h1>; */}
         <Navbar cartCount={cartCount} />
         <div className="Search">
