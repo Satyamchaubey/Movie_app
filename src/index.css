@@ -186,7 +186,7 @@ footer.starCount {
   .movie-card .left .video-container {
     padding-bottom: 68.42%; /* Aspect ratio 380 / 260 (260 / 380 * 100) */
     position: relative;
-    width: 70%;
+    width: 50%;
     height: 0;
     overflow: hidden;
     border: 2px solid #ccc; /* Increase border thickness */
