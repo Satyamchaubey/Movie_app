@@ -162,3 +162,91 @@ footer.starCount {
 
 
 }
+/* Existing CSS code remains unchanged */
+
+/* Responsive design using media queries */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .main {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+  
+  .movie-card {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .movie-card .left {
+    order: -1; /* Move the video container to the top */
+    max-width: 100%; /* Allow video to take full width */
+    padding-bottom: 0; /* Adjust padding for video container */
+    position: relative; /* Enable positioning */
+  }
+
+  .movie-card .left .video-container {
+    padding-bottom: 68.42%; /* Aspect ratio 380 / 260 (260 / 380 * 100) */
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border: 2px solid #ccc; /* Increase border thickness */
+  }
+
+  /* Style the video iframe */
+  .movie-card .left .video-container iframe {
+    width: 100%; /* Set video width to 100% */
+    height: 100%; /* Set video height to 100% */
+  }
+
+  .movie-card .right {
+    order: 1; /* Move text, buttons, and ratings below the video */
+    padding-left: 0; /* Adjust padding for text container */
+    padding-top: 20px; /* Add spacing between video and text */
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: space-between; /* Align buttons at each end */
+    align-items: center; /* Align items vertically */
+    
+  }
+
+  .movie-card .title {
+    font-size: 18px; /* Decrease title font size for smaller screens */
+    text-align: center; /* Center-align the title */
+    margin-top: -25%;
+    margin-left: -20px;
+   
+  }
+  .movie-card .plot {
+    margin-top: -20px;
+    padding: 42px;
+    margin-top: -55px;
+
+    
+  }
+  .movie-card .price{
+    margin-top: 10px;
+  }
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .footer .rating {
+    font-size: 14px; /* Decrease rating font size for smaller screens */
+    margin-top: 10px; /* Add spacing between buttons and ratings */
+  }
+  .footer button {
+    width: 25%;
+    font-size: 14px; /* Adjust button font size */
+    margin-left: 15px;
+    margin-right:-13px;
+  }
+  
+  
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  /* Adjustments for even smaller screens (similar to the previous example) */
+}

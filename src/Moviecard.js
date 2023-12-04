@@ -17,8 +17,8 @@ import YouTube from 'react-youtube';
             <YouTube
             videoId={poster}
             opts={{
-              width: '640',
-              height: '360',
+              width: '380',
+              height: '260',
               playerVars: {
                 autoplay: 0,
               },
@@ -38,10 +38,10 @@ import YouTube from 'react-youtube';
                     className="str-btn"
                     onClick={()=>{minStars(movies)}}
                   ></img>
-                  <img
+                  <img 
                     alt="stars"
                     src="https://cdn-icons-png.flaticon.com/128/2107/2107957.png"
-                    className="stars"
+                    className="stars" 
                   ></img>
                   <img
                     alt="decrease"

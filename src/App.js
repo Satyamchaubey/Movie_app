@@ -3,6 +3,9 @@ import React from "react";
 import MovieList from "./MovieList";
 import Navbar from "./Navbar";
 import { movies } from "./moviesData";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 // import SearchBar from "./SearchBar";
 
@@ -74,8 +77,14 @@ class App extends React.Component {
   };
 
   handleChange = (event) => {
-    this.setState({ searchTerm: event.target.value });
+    this.setState({ searchTerm: event.target.value }, () => {
+      this.handleSearch(); //Trigger search whenever the input changes
+    });
   };
+  
+
+  
+
 
   render() {
     const { movies, cartCount,searchTerm, filteredMovies } = this.state;
@@ -91,7 +100,7 @@ class App extends React.Component {
             value={searchTerm}
             onChange={this.handleChange}
           />
-          <button onClick={this.handleSearch}>Search</button>
+          <button onClick={this.handleSearch}><FontAwesomeIcon icon={faSearch} /></button>
         </div>
         {searchTerm ? (
   <MovieList
